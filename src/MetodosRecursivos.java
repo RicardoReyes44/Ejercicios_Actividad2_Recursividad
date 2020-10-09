@@ -62,4 +62,25 @@ public class MetodosRecursivos {
 			cadenaInversa(cadena, longitud-1);
 		}
 	}
+    
+    public static void mostrarConversion(int numero) {
+    	String cadena = conversion(numero);
+
+    	for(int i=cadena.length()-1; i>=0; i--) {
+    		System.out.print(cadena.charAt(i));
+    	}
+    	
+    }
+    
+    public static String conversion(int numero) {
+		if(numero/2==0) {
+			return "1";
+		}else{
+			String c = "1";
+			if(numero%2==0) {
+				c = "0";
+			}
+			return c + conversion(numero/2);
+		}
+	}
 }
